@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" ng-app="BookItineraries">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Books Itinerary</title>
+
+  <!-- js -->
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet" />
+  <link href="./css/bootstrap-social.css" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          Book Itineraries
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+
+  <!-- Intro -->
+  <header class="intro">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 class="brand-heading">Books Itineraries</h1>
+            <a href="#about" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container content-section text-center">
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h2>About Books Itineraries</h2>
+        <p>BooksItineraries is a pet project where I intend to track the journeys embarked by the characters of some of the books I read.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Cheesy solution intended only to make the about section seem bigger. -->
+  <section id="about" class="container content-section text-center">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+      </div>
+    </div>
+  </section>
+
+  <!-- List of Books -->
+  <div class="greyBG">
+    <section id="books" class="container content-section text-center">
+      <div class="container">
+        <h3>List of books:</h3>
+        <main class="angular-training-main" ng-controller="MainCtrl">
+          <div class="list-group">
+            <button type="button" data-toggle="collapse" data-target="#bookInfo" class="list-group-item" ng-repeat="book in books">
+              {{book}}
+            </button>
+            <div class="well">
+              <div id="bookInfo" class="collapse">
+                Bla bLa bLa
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </section>
+  </div>
+
+
+  <footer>
+    <div class="container text-center">
+      <ul class="list-inline">
+        <li>
+          José Cortez
+        </li>
+        <li>
+          <a href="https://twitter.com/jospCortez" class="btn btn-social-icon btn-twitter">
+            <span class="fa fa-twitter"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/Cortezz" class="btn btn-social-icon btn-github">
+            <href>
+            <span class="fa fa-github"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+
+</html>
