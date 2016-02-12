@@ -15,6 +15,8 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/jquery.easing.min.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+  <script src='http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js'></script>
   <!-- CSS -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/index.css" rel="stylesheet" />
@@ -102,21 +104,31 @@
       <div class="container">
         <h3>List of books:</h3>
         <main class="angular-training-main" ng-controller="MainCtrl">
-          <div class="list-group">
-            <button type="button" data-toggle="collapse" data-target="#bookInfo" class="list-group-item" ng-repeat="book in books">
-              {{book}}
-            </button>
-            <div class="well">
-              <div id="bookInfo" class="collapse">
-                Bla bLa bLa
+          <accordion close-others="status.oneAtATime">
+            <accordion-group ng-repeat="book in books" is-open="status.isItemOpen[$index]">
+              <accordion-heading>{{book}}</accordion-heading>
+              <div class="row">
+                <div class="col-sm-12">
+                  Info on the book: {{book}}
+                </div>
               </div>
-            </div>
+            </accordion-group>
+          </accordion>
 
-          </div>
         </main>
+
+      </div>
+    </section>
+
+    <!-- Cheesy solution (x2!!) intended only to make the about section seem bigger. -->
+    <section id="about" class="container content-section text-center">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+        </div>
       </div>
     </section>
   </div>
+
 
 
   <footer>
@@ -133,7 +145,7 @@
         <li>
           <a href="https://github.com/Cortezz" class="btn btn-social-icon btn-github">
             <href>
-            <span class="fa fa-github"></span>
+              <span class="fa fa-github"></span>
           </a>
         </li>
       </ul>
