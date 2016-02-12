@@ -11,12 +11,16 @@
   <!-- js -->
   <script src="../node_modules/angular/angular.js"></script>
   <script src="js/controller.js"></script>
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
   <script src="js/utils.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.4.0.js"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src='http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.0.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+
   <!-- CSS -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
   <link href="./css/index.css" rel="stylesheet" />
@@ -103,19 +107,19 @@
     <section id="books" class="container content-section text-center">
       <div class="container">
         <h3>List of books:</h3>
-        <main class="angular-training-main" ng-controller="MainCtrl">
+        <div ng-controller="MainCtrl">
           <accordion close-others="status.oneAtATime">
             <accordion-group ng-repeat="book in books" is-open="status.isItemOpen[$index]">
-              <accordion-heading>{{book}}</accordion-heading>
+              <accordion-heading>{{book.title}}</accordion-heading>
               <div class="row">
                 <div class="col-sm-12">
-                  Info on the book: {{book}}
+                  BOOK INFO AND ITINERARY GOES HERE!
                 </div>
               </div>
             </accordion-group>
           </accordion>
 
-        </main>
+        </div>
 
       </div>
     </section>
