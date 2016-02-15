@@ -1,5 +1,5 @@
 {
-    "name": "booksItinerary",
+    "name": "booksItineraries",
     "version": "0.0.0",
     "description": "A list of books will be displayed. Each one of them, if clicked, will display information about the its itinerary.",
     "license": "MIT",
@@ -14,7 +14,9 @@
         "karma-chrome-launcher": "^0.2.2",
         "karma-firefox-launcher": "^0.1.6",
         "karma-jasmine": "^0.3.7",
-        "protractor": "^1.8.0"
+        "protractor": "^1.8.0",
+        "isbndbjs": "1.0.2"
+
     },
     "scripts": {
         "prestart": "npm install",
