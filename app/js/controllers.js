@@ -1,4 +1,6 @@
-app.controller('MainCtrl', function($scope) {
+var controllers = angular.module('BookItineraries.controllers', []);
+
+controllers.controller('MainCtrl', function($scope, googleBooksAPIservice) {
     $scope.books = [{
       "title": "All the Light We Cannot See",
       "id": 1
@@ -12,5 +14,10 @@ app.controller('MainCtrl', function($scope) {
       openStatus: [true],
       oneAtATime: true
     };
+
+    googleBooksAPIservice.getBook().success(function (data) {
+        $scope.bookData = data.volumeInfo.title;
+        console.log($scope.bookData);
+    });
 
 });

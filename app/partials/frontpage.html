@@ -1,0 +1,72 @@
+<!-- Intro -->
+<header class="intro">
+  <div class="intro-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="brand-heading">Books Itineraries</h1>
+          <a href="#about" class="btn btn-circle page-scroll">
+            <i class="fa fa-angle-double-down animated"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="container content-section text-center">
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <h2>About Books Itineraries</h2>
+      <p>BooksItineraries is a pet project where I intend to track the journeys embarked by the characters of some of the books I read.</p>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Cheesy solution intended only to make the about section seem bigger. -->
+<section id="about" class="container content-section text-center">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+
+    </div>
+  </div>
+</section>
+
+<!-- List of Books -->
+<div class="greyBG">
+  <section id="books" class="container content-section text-center">
+    <div class="container">
+      <h3>List of books:</h3>
+      <!--<div ng-controller="MainCtrl">-->
+        <uib-accordion close-others="status.oneAtATime">
+          <uib-accordion-group ng-repeat="book in books" is-open="status.isItemOpen[$index]">
+            <uib-accordion-heading>{{book.title}}</uib-accordion-heading>
+            <div class="row">
+              <div class="col-sm-12">
+                <button type="button " class="btn btn-primary">Itinerary</button>
+                
+              </div>
+            </div>
+          </uib-accordion-group>
+        </uib-accordion>
+      <!--</div>-->
+
+
+    </div>
+  </section>
+
+  <!-- Cheesy solution (x2!!) intended only to make the about section seem bigger. -->
+  <section id="about" class="container content-section text-center">
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+      </div>
+    </div>
+  </section>
+</div>
