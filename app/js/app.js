@@ -9,7 +9,7 @@ app.config(['$routeProvider', function($routeProvider) {
           }).
           when('/books/:bookId', {
               templateUrl: 'partials/bookItinerary.html',
-              controller: 'MainCtrl'
+              controller: 'BookItineraryCtrl'
           }).
           otherwise({
               redirectTo: '/books'

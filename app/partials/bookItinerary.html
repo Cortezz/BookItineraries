@@ -1,1 +1,33 @@
-<h1>Hello!</h1>
+<div class="bookInfo">
+  <div class="intro-body">
+    <div class="container">
+      <h2>{{bookData.title}}</h2>
+      <div class="media">
+        <div class="media-left">
+          <a href="#">
+            <img src={{bookData.imageLinks.thumbnail}} class="img-thumbnail" alt="Book Cover">
+          </a>
+        </div>
+        <div class="media-body">
+          <br>
+          <h5>Author: {{bookData.authors[0]}}</h5>
+          <h5> Date: {{bookData.publishedDate}}</h5>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="greyBG">
+  <section id="books">
+    <div class="container text-center">
+
+
+      BOOK ITINERARY GOES HERE!
+
+
+
+    </div>
+  </section>
+</div>

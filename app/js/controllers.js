@@ -1,6 +1,6 @@
 var controllers = angular.module('BookItineraries.controllers', []);
 
-controllers.controller('MainCtrl', function($scope, googleBooksAPIservice) {
+controllers.controller('MainCtrl', function($scope) {
     $scope.books = [{
       "title": "All the Light We Cannot See",
       "id": 1
@@ -15,9 +15,13 @@ controllers.controller('MainCtrl', function($scope, googleBooksAPIservice) {
       oneAtATime: true
     };
 
-    googleBooksAPIservice.getBook().success(function (data) {
-        $scope.bookData = data.volumeInfo.title;
-        console.log($scope.bookData);
-    });
+});
+
+controllers.controller("BookItineraryCtrl", function ($scope,googleBooksAPIservice) {
+
+  googleBooksAPIservice.getBook().success(function (data) {
+      $scope.bookData = data.volumeInfo;
+      console.log($scope.bookData);
+  });
 
 });
