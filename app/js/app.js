@@ -7,7 +7,7 @@ app.config(['$routeProvider', function($routeProvider) {
               templateUrl: 'partials/frontpage.html',
               controller: 'MainCtrl'
           }).
-          when('/books/:bookId', {
+          when('/books/:ISBN', {
               templateUrl: 'partials/bookItinerary.html',
               controller: 'BookItineraryCtrl'
           }).

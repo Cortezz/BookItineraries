@@ -3,10 +3,10 @@ var controllers = angular.module('BookItineraries.controllers', []);
 controllers.controller('MainCtrl', function($scope) {
     $scope.books = [{
       "title": "All the Light We Cannot See",
-      "id": 1
+      "ISBN": '1476746583'
     }, {
       "title": 'Over the Edge of the World: Magellan\'s Terrifying Circumnavegation of the Globe',
-      "id": 2
+      "ISBN": '006093638X'
     }];
 
     $scope.status = {
@@ -17,9 +17,10 @@ controllers.controller('MainCtrl', function($scope) {
 
 });
 
-controllers.controller("BookItineraryCtrl", function ($scope,googleBooksAPIservice) {
+controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, googleBooksAPIservice) {
 
-  googleBooksAPIservice.getBook().success(function (data) {
+  
+  googleBooksAPIservice.getBook($routeParams.ISBN).success(function (data) {
       $scope.bookData = data.volumeInfo;
       console.log($scope.bookData);
   });
