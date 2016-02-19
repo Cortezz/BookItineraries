@@ -19,8 +19,10 @@ controllers.controller('MainCtrl', function($scope) {
 
 controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, googleBooksAPIservice) {
 
+  $scope.ISBN = $routeParams.ISBN;
 
-  googleBooksAPIservice.getBook($routeParams.ISBN).success(function (data) {
+
+  googleBooksAPIservice.getBook($scope.ISBN).success(function (data) {
       $scope.bookData = data.items[0].volumeInfo;
       console.log($scope.bookData);
   });
