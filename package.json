@@ -1,32 +1,14 @@
 {
-    "name": "booksItineraries",
-    "version": "0.0.0",
-    "description": "A list of books will be displayed. Each one of them, if clicked, will display information about the its itinerary.",
-    "license": "MIT",
-        "dependencies": {
+    "name": "BookItineraries",
+    "main": "server.js",
+    "dependencies" : {
+        "express"    : "~4.7.2",
+        "mongoose"   : "~4.1.0",
+        "morgan"     : "~1.2.2",
+        "body-parser": "~1.5.2",
+        "jsonwebtoken": "^5.0.2",
+        "method-override": "~2.1.2",
         "angular": "^1.5.0",
         "angular-route": "^1.5.0"
-    },
-    "devDependencies": {
-        "angular-mocks": "^1.5.0",
-        "http-server": "^0.6.1",
-        "karma": "^0.13.19",
-        "karma-chrome-launcher": "^0.2.2",
-        "karma-firefox-launcher": "^0.1.6",
-        "karma-jasmine": "^0.3.7",
-        "protractor": "^1.8.0",
-        "isbndbjs": "1.0.2"
-
-    },
-    "scripts": {
-        "prestart": "npm install",
-        "start": "http-server -a 0.0.0.0 -p 9000 -c10",
-        "pretest": "npm install",
-        "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
-        "test-single": "node node_modules/karma/bin/karma start test/karma.conf.js --single-run",
-        "preupdate-webdriver": "npm install",
-        "update-webdriver": "webdriver-manager update",
-        "preprotractor": "npm run update-webdriver",
-        "protractor": "protractor test/protractor.conf.js"
     }
 }

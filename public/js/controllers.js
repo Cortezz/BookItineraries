@@ -21,6 +21,12 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
   $scope.ISBN = $routeParams.ISBN;
 
+  $scope.map = {
+    'center' : [50, 10],
+    'zoom': 4
+  }
+
+
 
   googleBooksAPIservice.getBook($scope.ISBN).success(function (data) {
       $scope.bookData = data.items[0].volumeInfo;
