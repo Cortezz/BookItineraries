@@ -11,10 +11,12 @@ var app             = express();
 
 // Express Configuration
 // -----------------------------------------------------
-// Sets the connection to MongoDB
-mongoose.connect("mongodb://ds055935.mongolab.com:55935/bookitineraries");
+// Sets the connection to the database (MongoLab)
+mongoose.connect("mongodb://admin:admin@ds055935.mongolab.com:55935/bookitineraries");
+require("./app/models");
 
-// Logging and Parsing
+
+app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));                 // sets the static files location to public
 app.use(morgan('dev'));                                         // log with Morgan
 app.use(bodyParser.json());                                     // parse application/json
@@ -25,7 +27,7 @@ app.use(methodOverride());
 
 // Routes
 // ------------------------------------------------------
-// require('./app/routes.js')(app);
+require('./app/routes.js')(app);
 
 // Listen
 // -------------------------------------------------------

@@ -17,14 +17,15 @@ controllers.controller('MainCtrl', function($scope) {
 
 });
 
-controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, googleBooksAPIservice) {
+controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, googleBooksAPIservice, bookItineraryService) {
 
   $scope.ISBN = $routeParams.ISBN;
 
+/*
   $scope.map = {
     'center' : [50, 10],
     'zoom': 4
-  }
+  }*/
 
 
 
@@ -32,5 +33,18 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
       $scope.bookData = data.items[0].volumeInfo;
       console.log($scope.bookData);
   });
+
+  bookItineraryService.getBookItinerary($scope.ISBN).success(function (data) {
+
+    $scope.bookItinerary = data;
+
+    $scope.map = {
+      'center': [data.center.lat, data.center.long],
+      'zoom': data.zoom
+    };
+    console.log($scope.map.center);
+    console.log($scope.BookItinerary);
+  })
+
 
 });
