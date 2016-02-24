@@ -13,6 +13,7 @@
           <br>
           <h5>Author: {{bookData.authors[0]}}</h5>
           <h5> {{bookData.publishedDate}}</h5>
+
           {{bookItinerary}}
         </div>
       </div>
@@ -26,8 +27,10 @@
   <br>
   <div class="container">
     <h2>Itinerary</h2>
-  <div class="map-canvas">
-    <map ng-transclude class='google-map' center="map.center" zoom="map.zoom"> </map>
-  </div>
+    <!--<map ng-transclude class='google-map' center="map.center" zoom="map.zoom"> </map>-->
+    <div id="map"></div>
+
 </div>
+<br>
+<br>
 </div>

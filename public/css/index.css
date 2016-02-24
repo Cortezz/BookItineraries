@@ -22,6 +22,11 @@
   margin-right: auto;
 }
 
+#map {
+    height:420px;
+    width:600px;
+}
+
 /** GrayScale's CSS **/
 
 

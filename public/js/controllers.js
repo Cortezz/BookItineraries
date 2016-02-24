@@ -21,30 +21,52 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
   $scope.ISBN = $routeParams.ISBN;
 
-/*
-  $scope.map = {
-    'center' : [50, 10],
-    'zoom': 4
-  }*/
-
-
 
   googleBooksAPIservice.getBook($scope.ISBN).success(function (data) {
       $scope.bookData = data.items[0].volumeInfo;
-      console.log($scope.bookData);
   });
 
   bookItineraryService.getBookItinerary($scope.ISBN).success(function (data) {
 
-    $scope.bookItinerary = data;
+    $scope.bookItinerary = data.itinerary;
+    var characters = data.itinerary.characters;
 
-    $scope.map = {
-      'center': [data.center.lat, data.center.long],
-      'zoom': data.zoom
-    };
-    console.log($scope.map.center);
-    console.log($scope.BookItinerary);
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: data.zoom,
+        center: new google.maps.LatLng(data.center.lat, data.center.long),
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+       });
+
+    drawMap(map);
+
+
   })
+
+  function drawMap(map){
+    var i,j;
+    var path = [];
+    var currentCharacter;
+
+    for (i=0;i<$scope.bookItinerary.length;i++){
+      currentCharacter = $scope.bookItinerary[i];
+      console.log("currently searching "+currentCharacter.character);
+      for (j=0;j<currentCharacter.coords.length;j++){
+        path.push(new google.maps.LatLng(currentCharacter.coords[j].lat, currentCharacter.coords[j].long));
+        console.log(currentCharacter.coords[j].lat + " - " + currentCharacter.coords[j].long);
+      }
+
+      var polyline = new google.maps.Polyline({
+        path: path,
+        strokeColor: "#ff0000",
+        strokeWeight: 5,
+        strokeOpacity: 0.8
+      })
+      polyline.setMap(map);
+    }
+  }
+
+
+
 
 
 });
