@@ -44,11 +44,12 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
   function drawMap(map){
     var i,j;
-    var path = [];
+    var path;
     var currentCharacter;
 
     for (i=0;i<$scope.bookItinerary.length;i++){
       currentCharacter = $scope.bookItinerary[i];
+      path = [];
       console.log("currently searching "+currentCharacter.character);
       for (j=0;j<currentCharacter.coords.length;j++){
         path.push(new google.maps.LatLng(currentCharacter.coords[j].lat, currentCharacter.coords[j].long));
@@ -57,13 +58,22 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
       var polyline = new google.maps.Polyline({
         path: path,
-        strokeColor: "#ff0000",
+        strokeColor: generateRandomColor(),
         strokeWeight: 5,
         strokeOpacity: 0.8
       })
       polyline.setMap(map);
     }
   }
+
+  function generateRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 
 
