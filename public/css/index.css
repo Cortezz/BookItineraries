@@ -12,10 +12,10 @@
 .google-map {
   height: 100%;
 }
-.map-canvas {
+#map-canvas {
   text-align: center;
   padding-top: 25px;
-  height: 400px;
+  height: 500px;
   padding-bottom: 50px;
   width: 100%;
   margin-left: auto;
@@ -23,7 +23,7 @@
 }
 
 #map {
-    height:420px;
+    height:700px;
     width:600px;
 }
 

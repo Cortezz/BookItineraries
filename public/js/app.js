@@ -1,5 +1,5 @@
 var app = angular.module('BookItineraries', ['BookItineraries.controllers',
-        'BookItineraries.services', 'ngRoute','ui.bootstrap','ngMaps']);
+        'BookItineraries.services', 'ngRoute','ui.bootstrap']);
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.

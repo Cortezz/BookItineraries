@@ -21,12 +21,13 @@ Back-End:
 - [MongoDB](https://www.mongodb.org/)
 
 **Some other stuff:**
-- [Mongoose](http://mongoosejs.com/) - Packaged used to make the access to the MongoDB much, much easier.
-- I used the [Grayscale](http://blackrockdigital.github.io/startbootstrap-grayscale/) Bootstrap template and tweaked it a little bit here and there. You can get it [here](http://startbootstrap.com/template-overviews/grayscale/).
+- [Mongoose](http://mongoosejs.com/) - Package used to make the access to the MongoDB much, much easier.
+- [Mongolab](https://mongolab.com) - MongoDB cloud hosting service.
+- I used the [Grayscale  Bootstrap template](http://blackrockdigital.github.io/startbootstrap-grayscale/) and tweaked it a little bit here and there. You can get it [here](http://startbootstrap.com/template-overviews/grayscale/).
 - I managed to create the accordion list thanks to the [Angular Bootstrap UI](https://angular-ui.github.io/bootstrap/).
 - [Bootstrap Social](https://github.com/lipis/bootstrap-social) for some really cool social networks buttons made in CSS.
-- [Google Maps API] (https://developers.google.com/maps/)
+- [Google Maps API] (https://developers.google.com/maps/) for... google maps.
 - [Google Books API](https://developers.google.com/books/docs/v1/getting_started) to fetch data from books. This wasn't really necessary since there's no dynamic information but I wanted to try it anyway.
-- And last but not least, i used the following images:
+- And last but not least, I used the following images:
   - [This](https://artsintherightplace.files.wordpress.com/2012/01/still-no-soul-appeared-upon-her-decks.jpg) one for the home page, create by book sculptor Justin Rowe.
   - And for the page which displays the itinerary, [this](http://wallpaperswide.com/reading_imagination-wallpapers.html) one.

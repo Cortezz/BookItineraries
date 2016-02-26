@@ -28,10 +28,9 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
   bookItineraryService.getBookItinerary($scope.ISBN).success(function (data) {
 
-    $scope.bookItinerary = data.itinerary;
-    var characters = data.itinerary.characters;
+    $scope.bookItinerary = data.itinerary
 
-      var map = new google.maps.Map(document.getElementById('map'), {
+      var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: data.zoom,
         center: new google.maps.LatLng(data.center.lat, data.center.long),
         mapTypeId: google.maps.MapTypeId.TERRAIN
@@ -42,7 +41,7 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
 
   })
 
-  
+
 
 
 });
