@@ -27,6 +27,7 @@ Back-End:
 - I managed to create the accordion list thanks to the [Angular Bootstrap UI](https://angular-ui.github.io/bootstrap/).
 - [Bootstrap Social](https://github.com/lipis/bootstrap-social) for some really cool social networks buttons made in CSS.
 - [Google Maps API] (https://developers.google.com/maps/) for... google maps.
+- [Map Icons Collection](https://mapicons.mapsmarker.com/) for some neat custom Google Maps icons.
 - [Google Books API](https://developers.google.com/books/docs/v1/getting_started) to fetch data from books. This wasn't really necessary since there's no dynamic information but I wanted to try it anyway.
 - And last but not least, I used the following images:
   - [This](https://artsintherightplace.files.wordpress.com/2012/01/still-no-soul-appeared-upon-her-decks.jpg) one for the home page, create by book sculptor Justin Rowe.
