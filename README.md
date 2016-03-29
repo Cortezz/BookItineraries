@@ -42,5 +42,5 @@ Back-End:
 
 Sure thing, go ahead!
 ```
-bookitineraries.heroku.com/
+[http://bookitineraries.herokuapp.com](http://bookitineraries.herokuapp.com)
 ```
