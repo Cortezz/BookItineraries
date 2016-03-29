@@ -32,3 +32,15 @@ Back-End:
 - And last but not least, I used the following images:
   - [This](https://artsintherightplace.files.wordpress.com/2012/01/still-no-soul-appeared-upon-her-decks.jpg) one for the home page, create by book sculptor Justin Rowe.
   - And for the page which displays the itinerary, [this](http://wallpaperswide.com/reading_imagination-wallpapers.html) one.
+
+#### List of Books
+
+ - All the Light We Cannot See
+ - Over the Edge of the World - Magellan's Terrifying Circumnavigation of the Globe
+
+#### Want to check it out?
+
+Sure thing, go ahead!
+```
+bookitineraries.heroku.com/
+```
