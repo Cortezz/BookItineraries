@@ -44,27 +44,30 @@ function drawMarkers(markers, map, itineraryLength) {
   var marker;
   var infowindow = new google.maps.InfoWindow();
 
-  for (i = 0, j=0, markerCounter=1; i < markers.length; i++, markerCounter++) {
+  for (i = 0, j=0, markerCounter=1; i < markers.length; i++) {
 
-    marker = new google.maps.Marker({
-      position: markers[i].coords,
-      title: "Character",
-      icon: "https://7c29ac479ebd9f2e21b06584476b397450a02067-www.googledrive.com/host/0BwyVoAL8Xtc-VllZUzFNNDcyclU/number_"+markerCounter+"%20copy.png",
-      map: map
-    });
+    if (markers[i].desc!=""){
+       marker = new google.maps.Marker({
+         position: markers[i].coords,
+         title: "Character",
+         icon: "https://7c29ac479ebd9f2e21b06584476b397450a02067-www.googledrive.com/host/0BwyVoAL8Xtc-VllZUzFNNDcyclU/number_"+markerCounter+"%20copy.png",
+         map: map
+       });
 
-    if (markerCounter==(itineraryLength[j]))
-    {
-      markerCounter = 0;
-      j++;
-    }
+       if (markerCounter==(itineraryLength[j]))
+       {
+         markerCounter = 0;
+         j++;
+       }
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infowindow.setContent(generateContent(markers[i].character, markers[i].desc));
-        infowindow.open(map, marker);
-      }
-    })(marker, i));
+       google.maps.event.addListener(marker, 'click', (function(marker, i) {
+         return function() {
+           infowindow.setContent(generateContent(markers[i].character, markers[i].desc));
+           infowindow.open(map, marker);
+         }
+       })(marker, i));
+       markerCounter++;
+     }
   }
 }
 
