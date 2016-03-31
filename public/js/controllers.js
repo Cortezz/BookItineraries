@@ -33,7 +33,8 @@ controllers.controller("BookItineraryCtrl", function ($scope, $routeParams, goog
       var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: data.zoom,
         center: new google.maps.LatLng(data.center.lat, data.center.long),
-        mapTypeId: google.maps.MapTypeId.TERRAIN
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
+        minZoom: 2
        });
 
     drawMap(map, $scope.bookItinerary);
