@@ -7,7 +7,10 @@ controllers.controller('MainCtrl', function($scope) {
     }, {
       "title": 'Over the Edge of the World: Magellan\'s Terrifying Circumnavegation of the Globe',
       "ISBN": '006093638X'
-    }];
+   }, {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "ISBN": '059035342X'
+   }];
 
     $scope.status = {
       isFirstOpen: true,
