@@ -12,7 +12,7 @@ var app             = express();
 // Express Configuration
 // -----------------------------------------------------
 // Sets the connection to the database (MongoLab)
-mongoose.connect("mongodb://user:user@ds055935.mongolab.com:55935/bookitineraries");
+mongoose.connect("mongodb://user:user@ds055935.mlab.com:55935/bookitineraries");
 require("./app/models");
 
 
